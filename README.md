@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">✨ Creating bugs since 2019<br>📚 I'm currently learning about handling API's in react<br>🎯 Goals: To understand how to work with api's and manipulated data from an online source<br>🎲 Fun fact: ...</p>
+<p align="left">✨ Creating bugs since 2019<br>📚 I'm currently learning about handling API's in ReactJS<br>🎯 Goals: To understand how to work with api's and manipulated data from an online source<br>🎲 Fun fact: ...</p>
 
 ###
 
