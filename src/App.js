@@ -9,7 +9,7 @@ function App() {
     let url = "https://api.covid19api.com/summary";
     fetch(url).then((response)=>response.json().then((data)=>{
       console.log(data);
-      setglobalStats(data)
+      setglobalStats(data.Global)
     }))
 
   }, [])
