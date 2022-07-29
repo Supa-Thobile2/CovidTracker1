@@ -7,6 +7,9 @@ function CountriesStats(props){
                         Country Name
                     </th>
                     <th>
+                        Total number of cases
+                    </th>
+                    <th>
                         Active Cases
                     </th>
                 </tr>

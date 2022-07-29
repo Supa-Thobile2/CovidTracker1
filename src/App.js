@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import GlobalStats from './components/global';
-import CountriesStats from './components/countriesStats'
+import CountriesStats from './components/countriesStats';
+import Search from './components/search';
 
 function App() {
   const [globalStats, setglobalStats] = useState("");
-  const [countriesStats, setcountriesStats] = useState("");
+  const [countriesStats, setcountriesStats] = useState([]);
 
   useEffect(()=>{
     let url = "https://api.covid19api.com/summary";
@@ -15,11 +16,23 @@ function App() {
       setcountriesStats(data.Countries)
     }))
 
-  }, [])
+  }, []);
+
+  const searchCountries = ((text)=>{
+    let value = text.toLowerCase();
+    let result = [];
+    result = countriesStats.filter((countries)=>{
+      return countries.Country.toLowerCase().indexOf(value)!==-1
+    });
+
+    setcountriesStats(result)
+  })
+
   return (
     <div className="App">
       
        <GlobalStats global={globalStats}/>
+       <Search  search={searchCountries}/>
       <CountriesStats countries={countriesStats}/>
     </div>
   );
