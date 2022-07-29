@@ -10,15 +10,21 @@ function CountriesStats(props){
                         Active Cases
                     </th>
                 </tr>
-              {/* {props.countries.map((country) => (
+              {props.countries.map((country) => (
                 <tr>
                     <td>
                         {country.Country}
                     </td>
+                    <td>
+                        {country.TotalConfirmed}
+                    </td>
+                    <td>
+                        {country.NewConfirmed}
+                    </td>
 
                    
                 </tr>
-              ))} */}
+              ))}
             </table>
         </div>
     )
